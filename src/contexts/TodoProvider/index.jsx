@@ -6,12 +6,15 @@ const TodoProvider = ( {children} ) => {
     const [todos, setTodos] = useState([]);
 
     useEffect(() => {
-        if(JSON.parse(localStorage.getItem('todos')).length == 0) {
+
+        const storedTodos = JSON.parse(localStorage.getItem('todos'));
+
+        if(storedTodos && storedTodos.length > 0) {
+            setTodos(storedTodos);
+        } else {
             setTodos([
                 {id: 1, title: 'Vamos começar!', content: 'Clique no botão abaixo para criar sua primeira tarefa.', date: null, completed: false}
             ])
-        } else {
-            setTodos(JSON.parse(localStorage.getItem('todos')));
         }
     }, [])
 
