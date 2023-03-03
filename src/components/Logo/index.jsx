@@ -8,7 +8,7 @@ const Logo = ({size}) => {
     return <img  
         className="logo-img" 
         style={style}
-        src="/src/assets/logo.png" 
+        src="./src/assets/logo.png" 
         alt="logobanner" />
 }
 
