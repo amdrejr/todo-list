@@ -1,4 +1,5 @@
 import './style.css'
+import logoImg from '../../assets/logo.png'
 
 const Logo = ({size}) => {
     const style = {
@@ -8,7 +9,7 @@ const Logo = ({size}) => {
     return <img  
         className="logo-img" 
         style={style}
-        src="src/assets/logo.png" 
+        src={logoImg}
         alt="logobanner" />
 }
 
