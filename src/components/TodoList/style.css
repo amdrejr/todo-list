@@ -1,0 +1,38 @@
+.todoList {
+    box-sizing: border-box;
+    width: 95vw;
+    max-width: 600px;
+    height: 400px;
+    background-color: var(--color-dark-primary);
+    border-radius: 25px;
+    padding: 15px;
+    color: var(--color-dark-second);
+}
+
+.todoList > span {
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    width: 50%;
+    
+}
+
+.todoList > span:nth-last-child(2) {
+    text-align: end;
+  }
+.todoViewer {
+    margin-top: 10px;
+    width: 100%;
+    height: 335px;
+    overflow: scroll;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+@media screen and (max-width: 345px) {
+    .todoList > span {
+        font-size: clamp(14px, 5vw, 18px);
+    }
+}

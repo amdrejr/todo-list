@@ -1,0 +1,76 @@
+.todoItem {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    background-color: var(--color-dark-gray);
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.300);
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.200),
+                inset 0px 0px 15px rgba(0, 0, 0, .3);
+}
+
+.todoItem .todoBody {
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.todoTitle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.todoTitle > h4 {
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--color-dark-second);
+}
+
+.todoTitle > span {
+    color: var(--color-gray);
+    font-size: 13px !important;
+    font-style: italic;
+}
+
+.todoTitle > span.span-data {
+    margin-right: 20px;
+    align-self: center;
+}
+
+.checked {
+    transition: text-decoration, opacity 100ms linear;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.todoItem > .icos {
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+}
+
+.todoItem > .icos .setting {
+    color: var(--color-dark-second);
+    cursor: pointer;
+    
+}
+
+.todoItem > .icos > .trash {
+    color: var(--color-red);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+    .todoTitle {
+        display: block;
+        margin-bottom: 4px;
+    }
+}

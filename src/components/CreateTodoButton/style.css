@@ -1,0 +1,17 @@
+.createTodoButton {
+    all: unset;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    font-size: 50px;
+    background-color: var(--color-blue);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    color: var(--color-white);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6),
+                inset 0px 0px 25px rgba(0, 0, 0, 0.333);
+    cursor: pointer;
+}

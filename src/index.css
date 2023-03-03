@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Monoton&display=swap');
+
+
+:root {
+  font-family: 'Lato', sans-serif;
+
+  --headline: 'Monoton', cursive;
+
+  --color-green: #b7e747;
+  --color-dark-gray: #282f3f;
+  --color-blue: #506EEC;
+  --color-red: #CC2936;
+  --color-dark-blue: #0e028a;
+  --color-white: rgb(255, 248, 240);
+  --color-black: #1c2241;
+  --color-base-background: #576297;
+
+  --color-dark-primary: #171b29;
+  --color-dark-second: #8698d4;
+  --color-dark-third: #a2c3ff;
+
+  --color-gray: gray;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-base-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
