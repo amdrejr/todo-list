@@ -59,7 +59,7 @@ const EditTodo = () => {
                 <input type="date" name='date' id='date'/>
 
                 <div className='btns'>
-                    <button onClick={() => {navigate(-1)}}>Cancelar</button>
+                    <button>Cancelar</button>
                     <button type="submit">Salvar</button>
                 </div>
             </form>

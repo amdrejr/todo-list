@@ -30,7 +30,7 @@ const TodoItem = ({index, todo, onToggle}) => {
 
 
     return (
-        <div key={index} className="todoItem" onClick={() => {console.log(todo)}}>
+        <div key={index} className="todoItem">
             <Checkbox handleToggle={handleToggle} completed={completed} id={index} />
             <div className='todoBody'>
                 <div className='todoTitle'>

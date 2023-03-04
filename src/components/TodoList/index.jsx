@@ -15,7 +15,6 @@ const TodoList = () => {
             if(todo.completed) {
                 contador += 1;
             }
-            console.log(contador)
             setTotalConc(contador)
         })
     })
@@ -32,18 +31,23 @@ const TodoList = () => {
         localStorage.setItem('todos', JSON.stringify(updatedTodos));
     }
 
-    return (
-        <div className="todoList" onDoubleClick={() => {
-            setTodos([])
-            console.log('resetado')
-        }}>
-            <span>Total de Tarefas: {todos.length}</span>
-            <span>Concluídas: {totalConc}</span>
-            <div className="todoViewer">
-                {todos.map( (todo, index) => {
-                    return <TodoItem key={index} index={index} todo={todo} onToggle={handleToggle} />
-                })}
-            </div>
+    return (        
+        <div className="todoList">
+            {
+                todos.length > 0 ? (<>
+                    <span>Total de Tarefas: {todos.length}</span>
+                <span>Concluídas: {totalConc}</span>
+                <div className="todoViewer">
+                    {todos.map( (todo, index) => {
+                        return <TodoItem key={index} index={index} todo={todo} onToggle={handleToggle} />
+                    })}
+                </div>
+                </>)
+                : <div className="withoutTodos">
+                    <p>Parece que não temos nenhuma tarefa..</p>
+                    <p>Clique no botão abaixo para criar! 😄</p>
+                </div>
+            }
         </div>
     )
 }

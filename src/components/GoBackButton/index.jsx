@@ -2,8 +2,8 @@ import './style.css'
 
 import { useNavigate } from "react-router-dom"
 
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const GoBackButton = () => {
     const navigate = useNavigate()
@@ -12,7 +12,7 @@ const GoBackButton = () => {
 
     return (
         <button className="goBackButton" onClick={goBack}>
-            <FontAwesomeIcon icon={faTimes} />
+            <FontAwesomeIcon icon={faXmark} />
         </button>
     )
 }
