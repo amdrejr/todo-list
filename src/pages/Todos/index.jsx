@@ -18,7 +18,6 @@ const Todos = () => {
         navigate('/create-todo');
     }
 
-
     return (
         <section className="todos">
                 <Logo size={80}/>

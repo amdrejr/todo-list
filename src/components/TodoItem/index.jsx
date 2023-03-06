@@ -8,7 +8,7 @@ import { useContext } from 'react';
 import { TodoContext } from '../../contexts/TodoProvider';
 
 const TodoItem = ({index, todo, onToggle}) => {
-    const {id, title, content, date, completed} = todo;
+    const {title, content, date, completed} = todo;
 
     const { todos, setTodos } = useContext(TodoContext);
 
@@ -40,7 +40,7 @@ const TodoItem = ({index, todo, onToggle}) => {
                 {content.length > 0 && <p className={`todoContent ${completedCond}`}> {content} </p>}
             </div>
             <div className="icos">
-                <Link to={`/edit-todo/${id}`}><FontAwesomeIcon icon={faGear} className="setting"/></Link>
+                <Link to={`/edit-todo/${index}`}><FontAwesomeIcon icon={faGear} className="setting"/></Link>
                 <FontAwesomeIcon 
                     icon={faTrash} 
                     className="trash"

@@ -25,7 +25,6 @@ const CreateTodo = () => {
         const formatedDate = date == 0 ? null :  dateFormatter.format(new Date(date));
 
         const newTodo = {
-            id: todos.length + 1,
             title: title,
             content: content,
             date: formatedDate,

@@ -13,7 +13,7 @@ const TodoProvider = ( {children} ) => {
             setTodos(storedTodos);
         } else {
             setTodos([
-                {id: 1, title: 'Vamos começar!', content: 'Clique no botão abaixo para criar sua primeira tarefa.', date: null, completed: false}
+                {title: 'Vamos começar!', content: 'Clique no botão abaixo para criar sua primeira tarefa.', date: null, completed: false}
             ])
         }
     }, [])

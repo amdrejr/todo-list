@@ -18,7 +18,7 @@ function App() {
               <Route path="/" element={<Home />}/>
               <Route path='/todos' element={<Todos />}/>
               <Route path='/create-todo' element={<CreateTodo />}/>
-              <Route path='/edit-todo/:id' element={<EditTodo />}/>
+              <Route path='/edit-todo/:index' element={<EditTodo />}/>
           </Routes>
         </TodoProvider>
       </BrowserRouter>

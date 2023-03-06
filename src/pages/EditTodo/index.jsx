@@ -11,7 +11,7 @@ const EditTodo = () => {
     const navigate = useNavigate();
     const { todos, setTodos } = useContext(TodoContext)
 
-    const { id } = useParams();
+    const { index } = useParams();
 
     
 
@@ -27,7 +27,6 @@ const EditTodo = () => {
         const formatedDate = date == 0 ? null :  dateFormatter.format(new Date(date));
 
         const editedTodo = {
-            id: id,
             title: title,
             content: content,
             date: formatedDate,
@@ -35,7 +34,7 @@ const EditTodo = () => {
         }
 
         let addEditedToTodos = todos;  
-        addEditedToTodos[id -1] = editedTodo
+        addEditedToTodos[index] = editedTodo
               
         setTodos(addEditedToTodos);
         localStorage.setItem('todos', JSON.stringify(todos));
@@ -45,15 +44,26 @@ const EditTodo = () => {
 
     return ( 
         <section className='createTodo'>
+            {console.log(index)}
             <GoBackButton />
             <form onSubmit={handleSubmit} className="createTodo-content">
                 <h2>Editar Tarefa</h2>
 
                 <label htmlFor="title">Título</label>
-                <input type="text" name='title' id='title' defaultValue={todos[id-1].title} maxLength={30} required/>
+                <input 
+                    type="text" 
+                        name='title' 
+                        id='title'  
+                        maxLength={30} 
+                        defaultValue={todos[index].title}
+                        required/>
 
                 <label htmlFor='content'>Conteúdo</label>
-                <textarea name='content' id='content' defaultValue={todos[id-1].content}/>
+                <textarea 
+                    name='content' 
+                    id='content' 
+                    defaultValue={todos[index].content}
+                    />
 
                 <label htmlFor='date'>Data Final</label>
                 <input type="date" name='date' id='date'/>
